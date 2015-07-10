@@ -1,9 +1,10 @@
 window.globalRequireConfig = {
   baseUrl: 'src',
   waitSeconds: 15,
-  urlArgs: 'r1',
   paths: {
-    'jquery': '../bower_modules/jquery/dist/jquery'
+    'jquery': '../bower_modules/jquery/dist/jquery',
+    'jasmineJquery': '../bower_modules/jasmine-jquery/lib/jasmine-jquery',
+    'text': '../bower_modules/text/text'
   },
 
   shim: {

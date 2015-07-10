@@ -36,6 +36,7 @@
     <Content Include="src\apps\StopWatchTest.js" />
     <Content Include="src\config.js" />
     <Content Include="test\test-main-wallaby.js" />
+    <Content Include="test\data\a.html" />
     <Content Include="wallaby.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
