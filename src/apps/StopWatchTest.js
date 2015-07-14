@@ -5,6 +5,7 @@ define(['apps/StopWatch', 'jquery', 'jasmineJquery', 'text!testData/a.html'],
       it('works', function () {
         expect(StopWatch).toBeDefined();
         expect($).toBeDefined();
+        expect(1).toBe(1);
       });
     });
 
@@ -13,4 +14,27 @@ define(['apps/StopWatch', 'jquery', 'jasmineJquery', 'text!testData/a.html'],
         console.log(aHtml);
       });
     });
+
+    describe('attempt to reproduce editing issues', function () {
+
+      var foo;
+
+      beforeEach(function () {
+        foo = new StopWatch();
+        spyOn(foo, 'setBar');
+      });
+
+      it('promise + async test should work', function (done) {
+        foo.somePromise().done(function () {
+          expect(foo.setBar).toHaveBeenCalled();
+          done();
+        });
+      });
+
+      it('missing function call should work', function () {
+        //expect(foo.missingFunc()).toBeFalse();
+      });
+
+    });
+
   });
